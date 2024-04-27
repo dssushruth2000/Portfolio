@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">SUSHRUTH</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#workexperience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Sushruth</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#workexperience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="me.jpg" alt="Sushruth profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Sushruth Danivasa Sridhar</h1>
+      <p class="section__text__p2">Full Stack Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('Resume.pdf')">
+          Download CV
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/sushruth-danivasa-sridhar-2a26101a6'" />
+        <img src="github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/dssushruth2000'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="logo.jpg" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="skills.png" alt="Experience icon" class="icon" />
+            <h3>Certifications</h3>
+            <p>Associate Cloud Engineer <br />Architecting with Google Compute Engine </p>
+          </div>
+          <div class="details-container">
+            <img src="education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            I am a dedicated full-stack developer, deeply proficient in Python, JavaScript, and web technologies like
+            HTML, CSS, and React. My background includes robust roles at organizations like KPMG and Wipro, where I
+            successfully migrated applications to cloud platforms such as Azure, and enhanced system performances
+            significantly.
+
+            I am particularly skilled in deploying applications efficiently on Azure and AWS, creating scalable
+            solutions that leverage the power of cloud computing and containerization with Docker. My experience extends
+            to constructing CI/CD pipelines, enhancing collaboration and ensuring seamless product iterations.
+
+            My commitment to technological excellence drives me to deliver high-quality, user-centric solutions. I am
+            eager to tackle new challenges and contribute my knowledge and enthusiasm to the ever-evolving tech
+            landscape. Let's collaborate to build innovative and impactful web solutions together!
+
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend</h2>
+          <div class="article-container">
+            <article>
+              <img src="checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Html</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>React</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend</h2>
+          <div class="article-container">
+            <article>
+              <img src="checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Python</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3> JavaScript</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Azure</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>AWS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>PostgreSQL</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="workexperience">
+    <p class="section__text__p1">Professional</p>
+    <h1 class="title">Work Experience</h1>
+    <div class="experience-details-container">
+      <div class="details-container">
+        <img src="work_icon.png" alt="Work icon" class="icon" />
+        <h3>KPMG</h3>
+        <p>Analyst<br />August 2022 - July 2023</p>
+        <p>Led the strategic migration of over 10 applications to Azure, enhancing scalability and performance by 15%
+          through optimized resource allocation, and drove cross-functional collaboration for robust cloud solutions
+          leveraging Azure Databricks and PostgreSQL.</p>
+      </div>
+      <div class="details-container">
+        <img src="work_icon.png" alt="Work icon" class="icon" />
+        <h3>Wipro</h3>
+        <p>Intern<br />March 2022 - July 20213</p>
+        <p>At Wipro, I took on a series of demanding tasks, playing a key role in achieving team goals and mastering
+          complex problems, leading to a 10% boost in team productivity and refining my skills in a dynamic work
+          setting.</p>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="weatherapp.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Weather-App</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/dssushruth2000/Weather-App'">
+              Github
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="tic_tc_toe.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Tic-Tac-Toe</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/dssushruth2000/Tic-Tac-Toe'">
+              Github
+            </button>
+
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="Elixir.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title"> Elixir</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/dssushruth2000/Elixir'">
+              Github
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:dhanushg295@gmail.com">dsushruth2000@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="http://www.linkedin.com/in/sushruth-danivasa-sridhar-2a26101a6">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
