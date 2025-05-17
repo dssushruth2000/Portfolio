@@ -1,0 +1,855 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+:root {
+    --accent-color: #007acc;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.logo span{
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+.logo span,
+h2,
+.skill-category h3,
+.project h3 {
+  transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+.hamburg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+.nav-container .links{
+    display: flex;
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.0rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--accent-color);
+    transition: 0.2s linear;
+}
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+.nav-container .links a:hover{
+    color: var(--accent-color);
+}
+
+/*dropdown menu*/
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow:  0 0 20px black;
+    transition: 0.2s linear;
+}
+.dropdown .links a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+.dropdown .links a:hover{
+    background-color: var(--accent-color);
+}
+
+
+/*Because of this the project section was not exapnding*/
+/* section{
+    width: 100%;
+    height: 90vh;
+} */
+
+
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main-container .image {
+    width: 350px; /* Adjust based on preference */
+    height: 550px; /* Adjust based on preference */
+    border-radius: 50%; /* Ensures oval shape */
+    overflow: hidden;
+    box-shadow: 0 0 50px var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; 
+}
+
+.main-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the oval */
+    object-position: center top; /* Adjust to fit the subject properly */
+}
+.main-container .image:hover{
+    animation: animate 1.5s ease-in-out infinite;
+}
+@keyframes animate {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.05;
+    }
+    100%{
+        scale: 1;
+    }
+}
+.main-container .content{
+    color: white;
+    width: 40%;
+    min-height: 100px;
+}
+.content h1{
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+.content h1 span{
+    color: var(--accent-color);
+    text-shadow: 0  0 10px var(--accent-color);
+}
+.content .typewriter{
+    font-size: clamp(1rem, 1rem + 4vw, 2rem);
+    font-weight: 600;
+}
+.content .typewriter-text{
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+}
+.content p{
+    font-size: clamp(0.4rem , 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+
+/* Social Contact Icons */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adjust spacing between icons */
+    margin-bottom: 20px; /* Add spacing below icons */
+}
+.social-links img {
+    width: 40px; /* Adjust size */
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.social-links a:hover img {
+    transform: scale(1.3); /* Slightly enlarge */
+    filter: drop-shadow(0 0 10px var(--accent-color));
+}
+
+ 
+.content button {
+    width: auto; /* Adjust width dynamically */
+    min-width: 200px; /* Ensure minimum space */
+    max-width: 70%; /* Prevents excessive stretching */
+    height: auto; /* Allow flexible height */
+    padding: 10px 15px; /* Adjust padding */
+    margin: 5%;
+    background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+    color: white;
+    border: 2px solid var(--accent-color);
+    outline: none;
+    font-size: 1rem; /* Prevents text resizing too much */
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px var(--accent-color);
+    white-space: nowrap; /* Prevents text from breaking */
+    text-align: center;
+}
+
+
+
+.content button:hover {
+    scale: 1.1;
+    color: black;
+    background: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    font-weight: 700;
+    box-shadow: 0 0 20px var(--accent-color); /* Stronger shadow on hover */
+}
+
+
+@media (max-width:884px) {
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-container .links{
+        display: none;
+    }
+    .hamburg,
+    .cancel{
+        display: block;
+    }
+    .nav-container .links {
+    display: none; /* Hide regular nav on small screens */
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .main-container .image{
+        z-index: -1;
+        width: 50%;
+        height: 60%;
+    }
+}
+@media (max-width:440px){
+    .main-container .image{
+        width: 50%;
+        height: 60%;
+        margin-bottom: 0px;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .main-container button{
+        margin-top: 15px;
+    }
+}
+@media (max-width: 500px) {
+    .content button {
+        padding: 10px 15px;
+        font-size: 0.5rem;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+/* General Section Styling */
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* When section is visible */
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Headings */
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+    margin-bottom: 20px;
+}
+
+/* About Section */
+/* #about p {
+    font-size: 1.2rem;
+    max-width: 70%;
+    line-height: 1.6;
+} */
+#about {
+    text-align: center;
+    padding: 50px 20px; 
+    margin-bottom: 20px; 
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 70%;
+    line-height: 1.6;
+    margin-bottom: 10px; 
+}
+
+/* Adjusting general section spacing */
+section {
+    padding: 30px 50px; 
+    min-height: auto; 
+}
+
+
+/* Skills Section */
+#skills {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Section Title */
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-shadow: 0 0 15px var(--accent-color);
+}
+
+/* Skill Category */
+.skill-category {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensure category is centered */
+}
+
+/* Skill Category Title */
+.skill-category h3 {
+    font-size: 1.5rem;
+    color: #cccccc;
+    text-shadow: 0 0 10px #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Keep Icons in Original Color */
+.skill-category h3 i {
+    font-size: 1.5rem;
+    color: white;  /* Keeping icons original color */
+    margin-right: 5px;
+}
+
+/* Layout for Skills Container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allows items to wrap to the next row */
+    gap: 10px;
+    max-width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+
+/* Custom Grid Layout */
+.two-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.three-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Skill Box */
+.skill {
+    background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border: 2px solid #888888;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px none;
+    width: 180px; /* Fix width */
+    height: 65px; /* Fix height */
+    text-align: center;
+}
+
+/* Ensure Icons Stay Green */
+.skill i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+/* Hover Effect */
+.skill:hover {
+    transform: scale(1.1);
+    background: var(--accent-color);
+    color: black;
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+.skill:hover i {
+    color: black;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* Ensures even layout */
+        gap: 10px;
+    }
+    .skill {
+        width: auto;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Work Experience & Education Sections & Certification */
+#experience, #education {
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
+
+#experience h2, #education h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-shadow: 0 0 15px var(--accent-color);
+}
+
+/* Timeline Layout */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 60%;
+    margin: auto;
+}
+
+
+.timeline-item {
+    background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 100%;
+    /* max-width: 800px; */ /* if uncomment this, max-width in .timeline won't work  */
+    margin-bottom: 20px;
+    text-align: center; 
+    border-left: 4px solid #888888;
+    box-shadow: 0 0 10px #888888;
+    transition: all 0.3s ease-in-out;
+    min-height: 160px;
+}
+
+.timeline-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    justify-content: start;
+    flex-wrap: wrap; 
+}
+
+
+.company-logo-box {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  border: 1px solid #ccc;
+
+  /* ✅ Add margin to create spacing between logo and content */
+  margin-right: 20px;
+}
+
+
+.job-details {
+    flex: 1;
+    color: white;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    min-width: 0; 
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+    background: var(--accent-color);
+    color: black;
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+/* Ensuring green text also turns black on hover */
+.timeline-item:hover h3,
+.timeline-item:hover p,
+.timeline-item:hover a {
+    color: black !important;
+}
+
+.timeline-item h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+.timeline-item p,
+.timeline-item li {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin: 5px 0;
+}
+
+
+.timeline-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: var(--accent-color);
+    color: black;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 0 10px var(--accent-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.timeline-item a:hover {
+    background-color: white;
+    color: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .timeline {
+        max-width: 90%;
+    }
+    .timeline-item {
+        width: 100%;
+    }
+    .timeline-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+
+    .company-logo-box {
+        margin-bottom: 15px;
+    }
+
+    .job-details p {
+    max-width: 100%;
+    word-wrap: break-word;
+    line-height: 1.8;
+    }
+}
+
+
+
+/* 🔥 PROJECTS SECTION */
+#projects {
+    text-align: center;
+    padding: 90px 20px;
+    width: 100%;
+}
+
+/* 🔥 PROJECTS GRID */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive Grid */
+    gap: 30px;
+    max-width: 70%;
+    margin: auto;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+/* 🔥 PROJECT CARD */
+.project {
+    background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+    backdrop-filter: blur(10px);
+    border: 1px solid #888888;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px #888888;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 🔥 PROJECT IMAGE */
+.project-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* 🔥 PROJECT TITLE */
+.project h3 {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    text-shadow: none;
+    margin-top: 10px;
+}
+
+/* 🔥 PROJECT DESCRIPTION */
+.project p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px 0;
+    color: #ddd;
+    flex-grow: 1;
+}
+
+/* 🔥 GITHUB BUTTON */
+.project a {
+    display: inline-block;
+    margin-top: auto;
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid var(--accent-color);
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.project a:hover {
+    background: var(--accent-color);
+    color: black;
+}
+
+/* 🔥 PROJECT HOVER EFFECT */
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+/* 🔥 FIX CERTIFICATION SECTION OVERLAP */
+#certifications {
+    clear: both;
+    width: 100%;
+    margin-top: 80px;
+}
+
+/* 🔥 MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .project {
+        width: 100%;
+        min-height: auto;
+    }
+    #certifications {
+        margin-top: 50px;
+    }
+}
+
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #000000, #1a1a1a); /* Ensure consistency */
+    color: white; /* Match text color with other sections */
+}
+
+/* Contact Heading */
+#contact p {
+    font-size: 1rem;
+    color: grey;
+    margin-bottom: 5px;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    text-shadow: 0px 0px 10px var(--accent-color);
+}
+
+/* Contact Box */
+.contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    border-radius: 40px;
+    padding: 15px 30px;
+    width: auto;
+    max-width: 60%;
+    margin: auto;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 20px var(--accent-color); 
+    transition: all 0.3s ease-in-out;
+    flex-wrap: wrap; /* ✅ Allows wrapping */
+    word-break: break-word; /* ✅ Break long words */
+    overflow-wrap: anywhere; /* ✅ Wraps long email addresses */
+    text-align: center;
+}
+
+/* Contact Items */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+/* Icons */
+.contact-item i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Hover Effect */
+.contact-item:hover {
+    color: #0077b5; /* LinkedIn Blue */
+}
+
+.contact-item:hover i {
+    color: #0077b5;
+}
+
+
+/* Reduce excessive white space */
+#contact {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .contact-box {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        width: 90%;            /* 🔁 Fix: allow it to scale on small screens */
+        box-sizing: border-box;
+    }
+
+    .contact-item {
+        flex-direction: column;  /* 🔁 stack icon and text */
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-item i,
+    .contact-item img {
+        margin-bottom: 5px;     /* add spacing between icon and text */
+    }
+}
+
+/* for hamburger icon */
+@media (min-width: 885px) {
+  .hamburg,
+  .cancel {
+    display: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

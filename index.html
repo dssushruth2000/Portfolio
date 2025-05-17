@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
+    <title>Sushruth's Portfolio</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Sushruth <span>Danivasa Sridhar</span>
+            </div>
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+    </nav>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown">
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+            <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+    </div>
+
+
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="images/sushruth@uwm.edu-1.jpg" alt="Your Profile">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey, I'm <span>Sushruth</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                    I'm a <span class="typewriter-text"></span><label for="">|</label>
+                </div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+                    Passionate about building scalable web applications and AI-powered solutions.
+                </p>
+                <div class="social-links">
+                    <a href="http://www.linkedin.com/in/sushruth-danivasa-sridhar" target="_blank">
+                        <img src="logo/linkedin.svg" alt="LinkedIn" class="social-logo">
+                    </a>
+                    <a href="mailto:dssushruth2000@gmail.com" target="_blank">
+                        <img src="logo/gmail.svg" alt="Gmail" class="social-logo">
+                    </a>
+                    <a href="https://github.com/dssushruth2000" target="_blank">
+                        <img src="logo/github.svg" alt="GitHub" class="social-logo">
+                    </a>               
+                </div>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                    <a href="Sushruth_Danivasa_Sridhar_Resume.pdf" target="_blank">
+                        <button>Download Resume</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a dedicated software developer with expertise in Python, JavaScript, and full-stack development. With experience at
+            KPMG and Wipro, I have successfully migrated applications to cloud platforms like Azure, improving system performance
+            and scalability. My expertise lies in deploying efficient, cloud-native solutions using Azure, AWS, and containerization
+            with Docker, ensuring reliability and seamless scalability. Beyond cloud computing, I specialize in backend development,
+            web technologies, and automation, having built CI/CD pipelines that enhance collaboration and streamline deployments. My
+            projects range from AI-driven applications to web-based solutions, including a high-accuracy Traffic Sign Recognition
+            model and an interactive Multiplayer Tic-Tac-Toe game. Driven by a passion for problem-solving and innovation, I thrive
+            on building impactful, user-centric solutions that push technological boundaries. I am always eager to tackle new
+            challenges and contribute my knowledge to cutting-edge software development.
+            <p>🚀 Let’s connect and build something amazing together!</p>
+        </p>
+    </section>
+
+        <!-- Skills Section -->
+    <section id="skills">
+        <h2><i class="fa-solid fa-laptop-code"></i> Skills & Abilities</h2>
+
+        <!-- Programming Languages -->
+        <div class="skill-category">
+            <h3><i class="fa-solid fa-desktop"></i> Programming Languages</h3>
+            <div class="skills-container two-cols">
+                <div class="skill"><i class="fa-brands fa-python"></i> Python</div>
+                <div class="skill"><i class="fa-brands fa-js"></i> JavaScript</div>
+            </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="skill-category">
+            <h3><i class="fa-solid fa-globe"></i> Web Development</h3>
+            <div class="skills-container three-cols">
+                <div class="skill"><i class="fa-brands fa-html5"></i> HTML5</div>
+                <div class="skill"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+                <div class="skill"><i class="fa-brands fa-react"></i> React</div>
+            </div>
+        </div>
+
+        <!-- Backend & APIs -->
+        <div class="skill-category">
+            <h3><i class="fa-solid fa-server"></i> Backend & APIs</h3>
+            <div class="skills-container two-cols">
+                <div class="skill"><i class="fa-solid fa-code"></i> Flask</div>
+                <div class="skill"><i class="fa-solid fa-network-wired"></i> API Development</div>
+            </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-category">
+            <h3><i class="fa-solid fa-database"></i> Databases</h3>
+            <div class="skills-container three-cols">
+                <div class="skill"><i class="fa-solid fa-database"></i> MySQL</div>
+                <div class="skill"><i class="fa-solid fa-database"></i> PostgreSQL</div>
+                <div class="skill"><i class="fa-solid fa-database"></i> MongoDB</div>
+            </div>
+        </div>
+
+        <!-- Cloud Platforms -->
+        <div class="skill-category">
+            <h3><i class="fa-solid fa-cloud"></i> Cloud Platforms</h3>
+            <div class="skills-container three-cols">
+                <div class="skill"><i class="fa-brands fa-microsoft"></i> Azure</div>
+                <div class="skill"><i class="fa-brands fa-aws"></i> AWS</div>
+                <div class="skill"><i class="fa-brands fa-google"></i> GCP</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Work Experience Section -->
+    <section id="experience">
+        <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+            <div class="timeline-content">
+                <img src="logo/kpmg_logo.svg" alt="KPMG Logo" class="company-logo-box">
+                <div class="job-details">
+                <h3>Software Analyst</h3>
+                <p><i class="fa-solid fa-building"></i> KPMG</p>
+                <p><i class="fa-solid fa-calendar"></i> August 2022 - July 2023</p>
+                <ul>
+                    <li>
+                        Migrated 10+ enterprise applications to <strong>Microsoft Azure</strong>, utilizing <strong>Azure
+                            Databricks</strong> for distributed data engineering—achieving a 15% improvement in scalability and
+                        performance.
+                    </li>
+                    <li>
+                        Developed <strong>AI-powered cloud solutions</strong> and integrated <strong>RESTful APIs</strong> to automate
+                        workflows and enhance system interoperability.
+                    </li>
+                    <li>
+                        Collaborated on frontend optimization and implemented robust backend logic with <strong>PostgreSQL</strong>,
+                        streamlining data operations and improving response times.
+                    </li>
+                    <li>
+                        Automated deployments via <strong>CI/CD pipelines</strong> using Azure DevOps, incorporating code reviews,
+                        version control, and environment-specific releases—cutting manual effort by 40%.
+                    </li>
+                    <li>
+                        Refactored legacy codebases to align with modern microservices architecture, improving maintainability,
+                        modularity, and cross-team integration velocity.
+                    </li>
+                </ul>
+
+
+                </div>
+            </div>
+            </div>
+
+            <div class="timeline-item">
+            <div class="timeline-content">
+                <img src="logo/wipro_logo.svg" alt="KPMG Logo" class="company-logo-box">
+                <div class="job-details">
+                <h3>Software Developer Intern</h3>
+                <p><i class="fa-solid fa-building"></i> WIPRO</p>
+                <p><i class="fa-solid fa-calendar"></i> March 2022 - May 2022</p>
+                <ul>
+                    <li>
+                        Worked on building backend services using <strong>Java (Spring Boot)</strong> and <strong>MongoDB</strong>,
+                        helping to create lightweight, scalable APIs for internal applications.
+                    </li>
+                    <li>
+                        Assisted in integrating APIs with the frontend using <strong>JavaScript</strong>, ensuring seamless
+                        communication between client and server across different modules.
+                    </li>
+                    <li>
+                        Got hands-on experience with <strong>Machine Learning</strong> by contributing to automation-focused tasks that
+                        improved overall team efficiency and development speed.
+                    </li>
+                </ul>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+    <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+    <div class="timeline">
+
+        <div class="timeline-item">
+        <div class="timeline-content">
+            <img src="logo/uwm_logo.svg" alt="UWM Logo" class="company-logo-box" />
+            <div class="job-details">
+            <h3>Master's in Computer Science(M.Sc)</h3>
+            <p><i class="fa-solid fa-building-columns"></i> University of Wisconsin-Milwaukee</p>
+            <p><i class="fa-solid fa-calendar"></i> September 2023 – May 2025</p>
+            <p>
+                <strong>Master of Science in Computer Science</strong>, with a focus on cloud-native development, intelligent
+                systems, and human-centered computing. Completed advanced coursework in Cloud Computing, Machine Learning, NLP,
+                Image Processing, and Immersive Technologies. Gained hands-on experience through projects involving secure backend
+                systems, AI-driven chatbots, and full-stack web applications. Notably led the development of an AI-powered
+                university chatbot using Google Gemini and Flask, deployed to Azure via CI/CD. Developed strong skills in system
+                design, API integration, and deploying scalable, real-time applications with an emphasis on performance and
+                maintainability.
+            </p>
+
+
+            </div>
+        </div>
+        </div>
+
+        <div class="timeline-item">
+        <div class="timeline-content">
+            <img src="logo/dsatm_logo.png" alt="UWM Logo" class="company-logo-box" />
+            <div class="job-details">
+                <h3>Bachelor's in Computer Science(B.Sc)</h3>
+                <p><i class="fa-solid fa-building-columns"></i> Dayananda Sagar Academy of Technology and Management</p>
+                <p><i class="fa-solid fa-calendar"></i> 2018 – 2022</p>
+                <p>
+                    <strong>Bachelor of Science in Information Science</strong>, with a strong academic foundation in data structures,
+                    algorithms, database management, and software engineering. Gained hands-on experience in web development and machine
+                    learning through both coursework and project-based learning. Key projects include an IoT-based
+                    Smart Metering System using Arduino and Blynk for real-time electricity tracking, and <em>ELIXIR</em>, a custom
+                    e-commerce platform built with Flask, HTML, CSS, and JavaScript. These experiences deepened technical proficiency
+                    and fostered a strong focus on user-centric, innovative solutions.
+                </p>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+
+            <!-- Project 1: Traffic Sign Recognition -->
+            <div class="project">
+                <img src="images/traffic_sign_recognition.png" alt="Project 1" class="project-img">
+                <h3>Traffic Sign Recognition</h3>
+                <p>Traffic sign classification system built using deep learning models, including MobileNetV2 and custom CNNs. It
+                    improves road safety by accurately recognizing traffic signs from images in real-time.
+                </p>
+                <a href="https://github.com/dssushruth2000/Traffic-Sign-Recognition" target="_blank">View on GitHub</a>
+            </div>
+
+            <!-- Project 2: Tic-Tac-Toe -->
+            <div class="project">
+                <img src="images/tic_tac_toe.png" alt="Project 2" class="project-img">
+                <h3>Tic-Tac-Toe</h3>
+                <p>Web-based Tic Tac Toe game built using HTML, CSS, and JavaScript. The game allows two players to take turns placing
+                    "X" and "O" marks on a 3x3 grid. </p>
+                <a href="https://github.com/dssushruth2000/Tic-Tac-Toe" target="_blank">View on GitHub</a>
+            </div>
+
+            <!-- Project 3: Weather App -->
+            <div class="project">
+                <img src="images/weatherapp.png" alt="Project 3" class="project-img">
+                <h3>Weather App</h3>
+                <p>A user-friendly web app that provides weather forecasts based on city names, ZIP codes, or coordinates using the
+                    OpenWeatherMap API. It features real-time weather data, input validation, and a responsive design.
+                </p>
+                <a href="https://github.com/dssushruth2000/Weather-App" target="_blank">View on GitHub</a>
+            </div>
+
+            <!-- Project 4: EchoChop VR Game -->
+            <div class="project">
+                <img src="images/ecochop.png" alt="Project 4" class="project-img">
+                <h3>Eco-Chop VR Game</h3>
+                <p>A VR-based tree chopping simulator built with the Godot Engine for Oculus Quest 2. Players interact with a dynamic forest
+                    environment using motion controls, while atmospheric gas levels (O₂ and CO₂) respond in real time. Features laser-pointer
+                    menus, HUD updates, and standalone VR deployment.
+                </p>
+                <a href="https://github.com/dssushruth2000/Eco-Chop" target="_blank">View on GitHub</a>
+            </div>
+             <!-- Project 5: Elixir -->
+             <div class="project">
+                <img src="images/Elixir.png" alt="Project 4" class="project-img">
+                <h3>Elixir</h3>
+                <p>Elixir is a full-stack web application built with Python (Flask), HTML, CSS, and JavaScript for an interactive
+                    shopping experience. It features user authentication, product browsing, a shopping cart, and a secure checkout
+                    process.
+                </p>
+                <a href="https://github.com/dssushruth2000/Elixir" target="_blank">View on GitHub</a>
+            </div>
+            
+        </div>
+    </section>
+
+    
+
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2><i class="fa-solid fa-award"></i> Certifications</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3> Associate Cloud Engineer</h3>
+                <p><i class="fa-solid fa-building"></i> Google</p>
+                <p><i class="fa-solid fa-calendar"></i> October 2022  </p>
+                <a href="https://google.accredible.com/f1db9b64-9885-40a8-9ad0-8efeb53a0fee" target="_blank">View Certificate</a>
+            </div>
+            <div class="timeline-item">
+                <h3>Artificial intelligence </h3>
+                <p><i class="fa-solid fa-building"></i> Verzeo </p>
+                <p><i class="fa-solid fa-calendar"></i> July 2021 </p>
+                <!-- <a href="https://www.credly.com/badges/YOUR_AWS_BADGE_LINK" target="_blank">View Certificate</a> -->
+            </div>
+            <div class="timeline-item">
+                <h3>Build a Face Recognition Application using Python </h3>
+                <p><i class="fa-solid fa-building"></i> Guvi </p>
+                <p><i class="fa-solid fa-calendar"></i> May 2021 </p>
+                <!-- <a href="https://www.credly.com/badges/YOUR_GCP_BADGE_LINK" target="_blank">View Certificate</a> -->
+            </div>
+            <div class="timeline-item">
+                <h3>Architecting with Google Compute Engine </h3>
+                <p><i class="fa-solid fa-building"></i> Google </p>
+                <p><i class="fa-solid fa-calendar"></i> April 2021</p>
+                <!-- <a href="https://www.credly.com/badges/YOUR_GCP_BADGE_LINK" target="_blank">View Certificate</a> -->
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Contact Section -->
+    <section id="contact">
+        <p>Get in Touch</p>
+        <h2>Contact Me</h2>
+        <div class="contact-box">
+            <a href="mailto:dssushruth2000@gmail.com" class="contact-item">
+                <img src="logo\gmail.svg" alt="Gmail" class="contact-icon">
+                dssushruth2000@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/sushruth-danivasa-sridhar" target="_blank" class="contact-item">
+                <img src="logo\linkedin.svg" alt="LinkedIn" class="contact-icon">
+                LinkedIn
+            </a>
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
