@@ -40,8 +40,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Typewriter Effect
 const texts = [
-    "FULL STACK DEVELOPER",
-    "SOFTWARE ENGINEER"
+    "SOFTWARE ENGINEER",
+    "SOFTWARE DEVELOPER",
+    "FULL STACK DEVELOPER"
 ];
 let speed  = 100;
 const textElements = document.querySelector(".typewriter-text");
