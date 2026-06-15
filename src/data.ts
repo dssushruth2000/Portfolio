@@ -2,6 +2,9 @@
 // PORTFOLIO DATA — All content lives here. Easy to update!
 // ============================================================
 
+// Prefix public assets with base URL so they work on GitHub Pages (/Portfolio/)
+const b = import.meta.env.BASE_URL;
+
 export const personal = {
   name: 'Sushruth Danivasa Sridhar',
   shortName: 'Sushruth',
@@ -23,8 +26,8 @@ export const personal = {
   bio: "I'm a Computer Science grad from UW-Milwaukee who loves building things that actually perform. From cutting API latency by 35% in production to training ML models that hit 98.5% accuracy — I bring full-stack thinking, backend precision, and a bias for impact.",
   tagline: 'I build backends that scale and interfaces that wow.',
   available: true,
-  profileImage: '/profile.jpg',
-  resumeLink: '/Sushruth_Danivasa_Sridhar_Resume.pdf',
+  profileImage: `${b}profile.jpg`,
+  resumeLink: `${b}Sushruth_Danivasa_Sridhar_Resume.pdf`,
   stats: [
     { value: '2+', label: 'Years Exp' },
     { value: '10+', label: 'Projects' },
@@ -40,7 +43,7 @@ export const experience = [
     location: 'Saratoga, California',
     type: 'Full-time',
     color: '#6c63ff',
-    logo: '/naviget_logo.jpeg',
+    logo: `${b}naviget_logo.jpeg`,
     initials: 'N',
     highlights: [
       'Cut API response latency by **35%** by integrating Redis-backed task queues into the video rendering pipeline.',
@@ -56,7 +59,7 @@ export const experience = [
     location: 'Bengaluru, India',
     type: 'Full-time',
     color: '#00d4ff',
-    logo: '/kpmg_logo.svg',
+    logo: `${b}kpmg_logo.svg`,
     initials: 'KP',
     highlights: [
       'Boosted query efficiency by **48%** on a financial analytics dashboard handling **10M+ records** (Flask, PostgreSQL).',
@@ -72,7 +75,7 @@ export const experience = [
     location: 'Bengaluru, India',
     type: 'Full-time',
     color: '#ff6b9d',
-    logo: '/wipro_logo.svg',
+    logo: `${b}wipro_logo.svg`,
     initials: 'W',
     highlights: [
       'Redesigned the flight reservation backend in Java & MongoDB, resolving a concurrency bottleneck that cut booking errors by **20%** during peak traffic.',
@@ -177,7 +180,7 @@ export const education = [
     period: 'Sep 2023 – May 2025',
     gpa: '3.80 / 4.00',
     location: 'Milwaukee, WI',
-    logo: '/uwm_logo.svg',
+    logo: `${b}uwm_logo.svg`,
     initials: 'UW',
     color: '#fbbf24',
   },
@@ -188,7 +191,7 @@ export const education = [
     period: 'Aug 2018 – Jul 2022',
     gpa: '3.50 / 4.00',
     location: 'Bengaluru, India',
-    logo: '/dsatm_logo.png',
+    logo: `${b}dsatm_logo.png`,
     initials: 'DS',
     color: '#a78bfa',
   },
