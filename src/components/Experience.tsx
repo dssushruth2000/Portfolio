@@ -59,7 +59,7 @@ export default function Experience() {
 
         <div className="timeline">
           {experience.map((job, i) => (
-            <ExpItem key={job.company} job={job} delay={i * 0.12} last={i === experience.length - 1} />
+            <ExpItem key={job.company} job={job} delay={i * 0.12} />
           ))}
         </div>
       </div>
