@@ -67,7 +67,7 @@ export default function Experience() {
   );
 }
 
-function ExpItem({ job, delay, last }: { job: typeof experience[0]; delay: number; last: boolean }) {
+function ExpItem({ job, delay }: { job: typeof experience[0]; delay: number }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
